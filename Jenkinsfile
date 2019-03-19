@@ -13,6 +13,7 @@ pipeline {
             steps {
                  echo 'Testing..'
             }
+            sh 'mvn -B -V -U -e clean package'
         }
         
         stage('Deploy') { 
