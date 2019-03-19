@@ -11,9 +11,10 @@ pipeline {
         }
         stage('Test') {
             steps {
+                bat('mvn -B -V -U -e clean package')
                  echo 'Testing..'
             }
-            bat('mvn -B -V -U -e clean package')
+            
         }
         
         stage('Deploy') { 
